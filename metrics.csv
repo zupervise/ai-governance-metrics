@@ -1,0 +1,54 @@
+Metric,Description
+,
+AI Ethics & Governance Training Completion Rate,Reflects the organisation's investment in training employees on ethical considerations and governance frameworks related to AI.
+AI governance budget as a percentage of total IT spend,"Within total AI spending, 2 to 5% of AI budgets are often specifically devoted to governance, compliance, assurance, and responsible AI tools"
+AI Security Incident Rate,Tracks the frequency of security incidents related to AI systems.
+AI System Average Uptime,Higher uptime indicates greater reliability and availability of AI systems.
+AI-risk Identification Coverage,Higher coverage suggests a more comprehensive AI-risk assessment process.
+AI-risk Incident Rate,Tracks the frequency of incidents related to AI-risks.
+AI-risk Mitigation Implementation Rate,Tracks the progress of implementing risk mitigation strategies.
+AI-risk Reassessment Frequency,Measures how often AI-risk assessments are reviewed and updated.
+AI-Specific Security Tool Adoption Rate,Higher adoption rate suggests a greater focus on addressing the unique security challenges posed by AI systems.
+Anonymisation/Pseudonymisation/Synthetic Data Usage Rate,Reflects the adoption of techniques to de-identify personal data used in AI systems.
+Audit finding density per AI governance domain,This helps to pinpoint which aspects of your governance framework are most frequently failing.
+Automated Performance Monitoring Coverage,Shows the extent to which AI models are being monitored automatically for performance issues.
+Average decision cycle time vs. Policy-defined time-frames,Lengthy decision cycles can hinder agility and innovation.
+Average MTTR for AI Systems,Measures how quickly AI systems can be restored after a failure.
+Average Residual AI-risk Score,Provides an overall picture of the AI-risk level remaining after mitigation efforts.
+Average time from project initiation to governance approval,"Delays in this area can be significant, not only stifle innovation but can also render models obsolete before they are even deployed."
+Bias Detection Test Coverage,Higher coverage suggests a commitment to identifying and mitigating potential bias in AI models.
+Board-level AI risk reporting frequency,"Boards should receive updates on AI risk at least annually, quarterly reporting for organisations with substantial AI exposure or critical applications or whenever significant AI projects or deployments occur."
+Compliance with AI Safety Standards,Indicates the extent to which AI systems comply with industry-specific or regulatory safety standards.
+Cost of AI incidents attributable to governance failures vs. technical failures,Understanding the root cause of these costs is crucial for targeted investment.
+Cost of governance delays as a percentage of total project cost,Quantifying the financial impact of governance bottlenecks can be a powerful motivator for process improvement.
+Data Lineage Traceability,"Higher percentage reflects stronger data governance and the ability to understand the origin and transformations of data used in AI models, enhancing transparency and accountability."
+Data Minimisation Implementation Rate,Measures the extent to which data minimisation practices are being applied to AI systems.
+Dataset Bias Audit Rate,Reflects proactive efforts to ensure training data does not perpetuate or amplify existing biases.
+Documentation Completeness,"Measures the extent to which AI development, deployment, and monitoring processes are documented, contributing to transparency and auditability."
+Documentation completeness score at each stage,"Inadequate documentation is a recurring theme, complicating bias detection, error correction, and audits."
+Estimated compliance cost as a percentage of the AI program budget,This provides a clear financial picture of the cost of compliance.
+Estimated time and cost to achieve compliance with new regulations,Will vary between sectors & AI use-cases.
+Fairness Metric Tracking Rate,Shows the extent to which fairness metrics are being used to measure and monitor AI models for potential bias.
+Governance coverage percentage by AI use case type,This highlights which areas of AI application have the most robust governance.
+Internal AI Governance Audit Frequency,Measures how often the organisation conducts internal audits to assess its AI governance practices.
+Mean time to AI incident detection,The goal is to continuously reduce this window of vulnerability.
+Number of AI projects that would need to be paused or modified,This assesses the potential disruption to the innovation pipeline.
+Number of current processes requiring modification,This highlights the scale of the adaptation challenge.
+Number of dedicated AI governance FTEs,"Organisations handling high-risk AI (e.g., pharma, financial services) often employ more governance resources relative to revenue than those focused on low-risk, internal tools."
+Number of escalation paths that bypass designated decision-makers,Frequent bypassing of formal channels indicates a flawed or inefficient process.
+Number of governance checkpoints bypassed per project,"This metric directly reflects the adherence to, or disregard for, established AI governance protocols."
+Number of governance processes that failed during AI incident response,This analysis helps to identify the weakest links in the governance chain.
+Number of post-deployment governance issues discovered,A high number of issues post-launch often points to weaknesses in the initial governance and review process.
+Number of process changes implemented post-incident,The true test of learning is whether insights from an incident lead to sustained process improvements.
+Number of vendor contracts with AI-specific governance clauses,"Contracts should explicitly address data rights, model transparency, and liability."
+Percentage of AI incidents revealing unknown governance gaps,A significant percentage here indicates a reactive rather than proactive governance posture.
+Percentage of AI projects with formal risk assessments,Auditing AI models will fast become a non-negotiable requirement with large organisations facing more scrutiny in disparate jurisdictions.
+Percentage of AI vendors with completed due diligence assessments,This is a fundamental first step in managing vendor risk.
+Percentage of employees who can correctly identify their AI governance responsibilities,"A lack of clarity at the executive level can lead to inconsistent and ineffective governance (tricky, but powerful)"
+Percentage of staff requiring additional training,A prepared workforce is central to successful regulatory adaptation.
+Percentage of vendor AI changes that trigger internal governance reviews,Changes to vendor models can introduce new risks that require attention.
+Policy compliance scores across different business units,This can identify departments or teams that may require additional training or support.
+Risk assessment completion rates by model complexity,"This can reveal if more complex, and potentially riskier, projects are receiving the necessary scrutiny."
+Stress Test Pass Rate,Reflects the resilience of AI systems under high workloads or unexpected inputs.
+Time to Resolve Data Breaches Involving AI,Shorter resolution times indicate a more efficient and effective response to data breaches.
+Vendor incident notification compliance rate,Timely notification of incidents is critical for effective response.
