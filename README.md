@@ -2,7 +2,8 @@
 
 ## 🧠 What is this?
 
-**AI Governance Metrics** is an open-source repository of practical, defensible, and industry-specific metrics for assessing the responsible governance of AI systems.
+**AI Governance Metrics** is an open-source repository of actionable, defensible, and domain-specific metrics to assess the governance of AI systems.
+
 
 Built for:
 - ✅ Compliance & risk teams
