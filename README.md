@@ -30,7 +30,7 @@ AI governance often lacks *quantifiable* signals. This project aims to:
 Each file includes:
 - Metric name
 - Description
-- Source / Formula (Coming soon)
+
 
 ---
 
