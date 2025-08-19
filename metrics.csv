@@ -1,94 +1,93 @@
-"Metric","Description","Approach","Comments"
-"Policy coverage ratio","Extent to which required AI governance policies exist","(# policies implemented ÷ # policies required by your framework) × 100","Target ≥ 90–100%; define required set (e.g., risk, data, safety, security, incident response)"
-"Policy exception rate","Frequency of approved exceptions to AI policies","(# approved exceptions open ÷ # total policies) × 100","Lower is better; track aging of exceptions"
-"RACI clarity score","Clarity of roles for key AI processes","(# processes with documented R/A/C/I ÷ # key processes) × 100","Aim for 100% on high-risk processes"
-"Ethics & AI training completion","Completion of required training","(# required learners completed ÷ # required learners) × 100","Report by role; refresh annually"
-"Risk register coverage","Coverage of identified AI risks in the risk register","(# AI risks logged ÷ # AI risks identified in assessments) × 100","Tie to enterprise risk taxonomy"
-"High-risk use case identification rate","Visibility of high-risk AI use cases","(# high-risk use cases identified ÷ # total AI use cases) × 100","Use a standardised risk rubric"
-"DPIA/LIA completion rate","Privacy impact assessment completion where applicable","(# completed DPIA/LIA for applicable projects ÷ # applicable projects) × 100","Regulatory-sensitive; document scoping rationale"
-"Regulatory mapping completeness","Mapping of regulatory requirements to controls","(# relevant requirements mapped ÷ # relevant requirements) × 100","Keep jurisdiction matrix current"
-"External audit findings (open)","Outstanding issues from independent audits","Count of open findings","Track severity and time open"
-"Audit evidence coverage","Availability of evidence for control tests","(# controls with sufficient evidence ÷ # controls tested) × 100","Aim ≥ 95%; sample evidence quality"
-"Data provenance coverage","Datasets with documented source/license/date","(# datasets with complete provenance ÷ # datasets used) × 100","Include model assets and prompts when applicable"
-"License compliance rate","Compliance with dataset/model/component licenses","(# assets with validated license compliance ÷ # assets assessed) × 100","Include terms for derivative use and redistribution"
-"Sensitive data exposure rate","Unintended presence of sensitive data in train/infer","(# records with sensitive attributes unintentionally present ÷ # records sampled) × 100","Use DLP scans; report by sensitivity class"
-"Data minimization ratio","How lean the collected data is vs. used","(# features used in production ÷ # features collected) × 100","Lower is better; track removal of unused features"
-"Data retention adherence","Adherence to retention/deletion schedules","(# datasets conforming to schedule ÷ # datasets in scope) × 100","Include training artifacts and logs"
-"DSR average response time","Average time to fulfill data subject requests","Sum of (close time − open time) ÷ # requests","Report by request type; compare to SLA"
-"DSR SLA compliance","Requests closed within SLA","(# requests closed within SLA ÷ # requests) × 100","Target ≥ 95%"
-"PII leakage rate (outputs)","Incidence of PII in model outputs","(# outputs flagged by PII detectors ÷ # outputs sampled) × 100","Validate detectors; use stratified sampling"
-"Dataset representativeness coverage","Coverage vs. defined population segments","(# key segments meeting sample threshold ÷ # defined segments) × 100","Define lawful, appropriate segments; document limitations"
-"Synthetic data usage ratio","Proportion of synthetic data used","(# synthetic training examples ÷ # total training examples) × 100","Note purpose (augmentation, privacy) and quality checks"
-"Model card completeness","Depth/completeness of model documentation","(# required fields populated ÷ # required fields) × 100","Include intended use, limits, evals, risks, contacts"
-"Datasheet completeness","Completeness of dataset documentation","(# required fields populated ÷ # required fields) × 100","Include collection, consent, licenses, known issues"
-"Documentation freshness","Time since last doc update","Median days since last update across artifacts","Flag stale docs (e.g., >90 days) for prod models"
-"Reproducibility rate","Ability to reproduce training/inference results","(# successful reproductions ÷ # reproduction attempts) × 100","Pin seeds, versions, data snapshots"
-"Version traceability completeness","Lineage coverage across data→code→model","(# models with full lineage links ÷ # production models) × 100","Include datasets, code commit, hyperparams, config"
-"Change management lead time","Time from approval to production","Median days from change approval to deployment","Track by risk level; aim for predictability"
-"Code review coverage","Peer review of ML/AI code and prompts","(# merged changes with review approval ÷ # merged changes) × 100","Include prompt/config changes"
-"Test coverage (code)","Automated test coverage of codebase","(Lines executed by tests ÷ total lines) × 100","Track unit, integration, data validation"
-"Requirement-to-test traceability","Linkage from requirements to tests","(# requirements with mapped tests ÷ # requirements) × 100","Critical for regulated contexts"
-"Task performance (baseline)","Primary task metric at release","Report metric (e.g., accuracy/F1/AUC/BLEU) on holdout","Define acceptance thresholds pre-release"
-"Robustness under shift","Performance drop under distribution shift","((Baseline − Shifted performance) ÷ Baseline) × 100","Test realistic shifts (domain, noise, length)"
-"OOD detection rate","Detection of out-of-distribution inputs","(True positives ÷ actual OOD cases) × 100","Pair with false positive rate on in-distribution"
-"Calibration error","Mismatch between confidence and accuracy","Expected Calibration Error (ECE) or Brier score","Lower is better; report per-group too"
-"Selective risk (abstention)","Error rate on non-abstained outputs","(Errors on accepted outputs ÷ # accepted outputs) × 100","Tune confidence thresholds"
-"Hallucination rate","Unsupported or fabricated model claims","(# outputs with unsupported claims ÷ # outputs sampled) × 100","Use fact-grounded eval sets or human review"
-"Toxicity rate","Rate of toxic or abusive content","(# outputs flagged by toxicity checks ÷ # outputs sampled) × 100","Calibrate for false positives"
-"Jailbreak success rate","Bypass of safety guardrails","(# successful jailbreaks ÷ # jailbreak attempts) × 100","Track by attack class; lower is better"
-"Prompt injection success rate","Attacks causing policy violations or data exfil","(# successful injections ÷ # injection attempts) × 100","Include tool-calling exploits"
-"Adversarial example success rate","Evasion under adversarial perturbations","(# attacks causing misbehavior ÷ # adversarial attempts) × 100","Scope to relevant modalities"
-"Poisoning detection coverage","Coverage of training data integrity checks","(# data sources scanned with poisoning checks ÷ # data sources) × 100","Include hash/signature checks"
-"Group fairness disparity (ΔFPR)","Gap in false positive rates across groups","max(FPR_group) − min(FPR_group)","Report lawful, appropriate groups; aim → 0"
-"Equal opportunity difference","Gap in true positive rates across groups","max(TPR_group) − min(TPR_group)","Complement with confidence intervals"
-"Demographic parity difference","Gap in positive decision rates","max(P_group) − min(P_group)","Use only where appropriate for context"
-"Calibration parity","Variation in calibration across groups","max(ECE_group) − min(ECE_group)","Monitor over time for drift"
-"Fairness drift over time","Change in fairness metric vs. baseline","Current disparity − baseline disparity","Investigate root causes when increasing"
-"Bias mitigation effectiveness","Impact of mitigation tactics","(Pre-mitigation disparity − post-mitigation disparity) ÷ pre-mitigation disparity","Report utility trade-offs"
-"HITL coverage","Use of human review where required","(# decisions routed to reviewer ÷ # decisions requiring review) × 100","Define routing rules clearly"
-"Override rate","Frequency of human overrides","(# overridden AI decisions ÷ # AI decisions reviewed) × 100","High rate may indicate model issues"
-"Escalation response time","Response speed to safety escalations","Median time from escalation open to first action","Track by severity"
-"Safety enforcement rate","Blocking of harmful outputs/requests","(# harmful attempts blocked ÷ # harmful attempts) × 100","Requires test harness or labeled traffic"
-"Red-team coverage","Coverage of defined threat categories tested","(# categories tested ÷ # categories defined) × 100","Map to a threat model (e.g., MITRE ATLAS)"
-"High-severity incident rate","Serious AI-related incidents","(# Sev-1/Sev-2 incidents ÷ volume, e.g., per 10k requests)","Define severity rubric and SLOs"
-"MTTD (incidents)","Mean time to detect AI incidents","Average time from incident start to detection","Aim to reduce via monitoring"
-"MTTR (incidents)","Mean time to resolve AI incidents","Average time from detection to containment/resolution","Include postmortem quality gates"
-"Explanation availability","Availability of explanations when required","(# decisions with explanation provided ÷ # decisions requiring explanation) × 100","Track type (global/local) and audience"
-"Recourse availability","Availability of appeal or recourse paths","(# decisions with documented recourse ÷ # decisions requiring recourse) × 100","Include turnaround expectations"
-"Consent capture rate","Valid consent captured for AI use","(# interactions with valid consent on record ÷ # interactions requiring consent) × 100","Per jurisdiction; include consent version"
-"User feedback rate","Feedback captured per usage","(# feedback items ÷ # user interactions) × 1,000","Encourage in-product feedback"
-"Feedback resolution time","Time to close feedback/action items","Median days from open to close","Track by category (safety, UX, quality)"
-"User satisfaction (CSAT/NPS)","User sentiment about AI features","CSAT % satisfied or NPS per standard method","Segment by user type"
-"Least privilege compliance","Access right-sizing for AI systems","(# principals passing access review ÷ # principals reviewed) × 100","Include data stores and model endpoints"
-"Secrets exposure incidents","Secrets accidentally exposed (e.g., in prompts/logs)","Count per period","Root-cause recurring issues"
-"SBOM completeness (AI stack)","Software/Model BOM completeness","(# components listed in SBOM ÷ # components discovered) × 100","Include datasets, models, prompts"
-"Vulnerability closure time (ML stack)","Speed to remediate CVEs","Median days from CVE publish to fix for in-scope components","Track by severity"
-"API abuse rate","Suspicious/abusive calls to AI APIs","(# abusive/suspicious requests ÷ # total requests) × 100","Use anomaly detection and auth telemetry"
-"Model exfil detection coverage","Coverage of exfiltration detection controls","(# exfil detection controls active ÷ # planned controls) × 100","E.g., canary prompts, rate limits, egress filters"
-"Inference cost per 1k requests","Unit cost of serving AI","(Total inference cost ÷ # requests) × 1,000","Break down by model/tier; watch GPU utilization"
-"Training energy (kWh)","Energy used per training run","Sum of (power draw × hours) across hardware","Correlate with emissions and cost"
-"Inference energy per 1k req","Energy per serving workload","(Total inference kWh ÷ # requests) × 1,000","Track by model and hardware"
-"Training emissions (kgCO2e)","Carbon footprint of training","Energy (kWh) × grid emission factor","Use location-based or market-based factors"
-"Availability (SLA)","Uptime of AI service","((Total time − downtime) ÷ total time) × 100","Report monthly and quarterly"
-"Latency P95","Tail latency for responses","95th percentile latency over period","Segment by endpoint and payload size"
-"Throughput stability","Stability of throughput under load","Coefficient of variation of requests/sec","Lower is better; test with load profiles"
-"Timeout rate","Requests timing out","(# timed-out requests ÷ # total requests) × 100","Correlate with latency and autoscaling"
-"Data drift magnitude (PSI)","Shift in input feature distributions","Population Stability Index per feature; report max/mean PSI","Thresholds: 0.1 caution, 0.25 significant"
-"Concept drift alerts","Frequency of target/label relationship changes","Count of drift alerts triggered in period","Validate with performance drops"
-"Model degradation rate","Change in performance vs. baseline","(Current metric − baseline metric) ÷ time","Investigate when exceeding threshold"
-"Alert fatigue rate","Non-actionable alerts fraction","(# alerts closed as noise ÷ # total alerts) × 100","Tune alerting; aim to reduce"
-"Monitoring coverage","Coverage of planned monitors","(# monitors implemented ÷ # monitors planned) × 100","Include data, performance, safety, cost"
-"Third-party model assessment coverage","Due diligence on external models/APIs","(# third-party models assessed ÷ # third-party models used) × 100","Include security, privacy, licensing"
-"Vendor SLA compliance","Vendor meeting contractual SLAs","(# months in compliance ÷ # months measured) × 100","Track penalties and remediation"
-"Content provenance labeling coverage","Labeling of AI-generated content per policy","(# AI outputs with provenance labels ÷ # AI outputs requiring labels) × 100","E.g., watermarks, C2PA tags"
-"Labeling accuracy (provenance)","Correctness of AI-content labels","(# correctly labeled outputs ÷ # labeled outputs sampled) × 100","Audit across channels"
-"Copyright notice rate","External copyright/takedown notices received","(# notices ÷ # outputs, e.g., per 10k)","Investigate root causes; legal review"
-"Unsafe content false negative rate","Harmful outputs not blocked","(# harmful outputs missed by filters ÷ # harmful attempts) × 100","Pair with false positive rate"
-"Output redaction effectiveness","Effectiveness of PII/sensitive redaction","(# sensitive items correctly redacted ÷ # sensitive items detected) × 100","Spot-check with human review"
-"Runbook completeness","Quality of operational runbooks","(# required sections present ÷ # required sections) × 100","Include rollback, kill switches, comms"
-"Model retirement hygiene","Decommissioning discipline","(# retired models with full offboarding artifacts ÷ # models retired) × 100","Include data deletion, access revocation"
-"Postmortem quality score","Quality of incident postmortems","(% with root cause, actions, owners, due dates ÷ # postmortems) × 100","Sample for depth; aim ≥ 90%"
-"Shadow mode duration adherence","Adherence to planned shadow testing period","Median actual shadow days ÷ planned shadow days","Shortcuts raise risk; justify deviations"
-"Red-team fix rate","Remediation of red-team findings","(# findings remediated by due date ÷ # findings) × 100","Prioritise high-severity"
-"Safety eval coverage","Coverage of safety evaluation suites","(# evals run from suite ÷ # evals in suite) × 100","Cover misuse, harms, bias, robustness"
-
+Metric,Description,Approach,Comments
+Adversarial example success rate,Evasion under adversarial perturbations,(# attacks causing misbehaviour ÷ # adversarial attempts) × 100,Scope to relevant modalities
+Alert fatigue rate,Non-actionable alerts fraction,(# alerts closed as noise ÷ # total alerts) × 100,Tune alerting; aim to reduce
+API abuse rate,Suspicious/abusive calls to AI APIs,(# abusive/suspicious requests ÷ # total requests) × 100,Use anomaly detection and auth telemetry
+Audit evidence coverage,Availability of evidence for control tests,(# controls with sufficient evidence ÷ # controls tested) × 100,Aim ≥ 95%; sample evidence quality
+Availability (SLA),Uptime of AI service,((Total time − downtime) ÷ total time) × 100,Report monthly and quarterly
+Bias mitigation effectiveness,Impact of mitigation tactics,(Pre-mitigation disparity − post-mitigation disparity) ÷ pre-mitigation disparity,Report utility trade-offs
+Calibration error,Mismatch between confidence and accuracy,Expected Calibration Error (ECE) or Brier score,Lower is better; report per-group too
+Calibration parity,Variation in calibration across groups,max(ECE_group) − min(ECE_group),Monitor over time for drift
+Change management lead time,Time from approval to production,Median days from change approval to deployment,Track by risk level; aim for predictability
+Code review coverage,Peer review of ML/AI code and prompts,(# merged changes with review approval ÷ # merged changes) × 100,Include prompt/config changes
+Concept drift alerts,Frequency of target/label relationship changes,Count of drift alerts triggered in period,Validate with performance drops
+Consent capture rate,Valid consent captured for AI use,(# interactions with valid consent on record ÷ # interactions requiring consent) × 100,Per jurisdiction; include consent version
+Content provenance labelling coverage,Labelling of AI-generated content per policy,(# AI outputs with provenance labels ÷ # AI outputs requiring labels) × 100,"E.g., watermarks, C2PA tags"
+Copyright notice rate,External copyright/takedown notices received,"(# notices ÷ # outputs, e.g., per 10k)",Investigate root causes; legal review
+Data drift magnitude (PSI),Shift in input feature distributions,Population Stability Index per feature; report max/mean PSI,"Thresholds: 0.1 caution, 0.25 significant"
+Data minimisation ratio,How lean the collected data is vs. used,(# features used in production ÷ # features collected) × 100,Lower is better; track removal of unused features
+Data provenance coverage,Datasets with documented source/license/date,(# datasets with complete provenance ÷ # datasets used) × 100,Include model assets and prompts when applicable
+Data retention adherence,Adherence to retention/deletion schedules,(# datasets conforming to schedule ÷ # datasets in scope) × 100,Include training artifacts and logs
+Dataset representativeness coverage,Coverage vs. defined population segments,(# key segments meeting sample threshold ÷ # defined segments) × 100,"Define lawful, appropriate segments; document limitations"
+Dataset completeness,Completeness of dataset documentation,(# required fields populated ÷ # required fields) × 100,"Include collection, consent, licenses, known issues"
+Demographic parity difference,Gap in positive decision rates,max(P_group) − min(P_group),Use only where appropriate for context
+Documentation freshness,Time since last doc update,Median days since last update across artifacts,"Flag stale docs (e.g., >90 days) for prod models"
+DPIA/LIA completion rate,Privacy impact assessment completion where applicable,(# completed DPIA/LIA for applicable projects ÷ # applicable projects) × 100,Regulatory-sensitive; document scoping rationale
+DSR average response time,Average time to fulfil data subject requests,Sum of (close time − open time) ÷ # requests,Report by request type; compare to SLA
+DSR SLA compliance,Requests closed within SLA,(# requests closed within SLA ÷ # requests) × 100,Target ≥ 95%
+Equal opportunity difference,Gap in true positive rates across groups,max(TPR_group) − min(TPR_group),Complement with confidence intervals
+Escalation response time,Response speed to safety escalations,Median time from escalation open to first action,Track by severity
+Ethics & AI training completion,Completion of required training,(# required learners completed ÷ # required learners) × 100,Report by role; refresh annually
+Explanation availability,Availability of explanations when required,(# decisions with explanation provided ÷ # decisions requiring explanation) × 100,Track type (global/local) and audience
+External audit findings (open),Outstanding issues from independent audits,Count of open findings,Track severity and time open
+Fairness drift over time,Change in fairness metric vs. baseline,Current disparity − baseline disparity,Investigate root causes when increasing
+Feedback resolution time,Time to close feedback/action items,Median days from open to close,"Track by category (safety, UX, quality)"
+Group fairness disparity (ΔFPR),Gap in false positive rates across groups,max(FPR_group) − min(FPR_group),"Report lawful, appropriate groups; aim → 0"
+Hallucination rate,Unsupported or fabricated model claims,(# outputs with unsupported claims ÷ # outputs sampled) × 100,Use fact-grounded eval sets or human review
+High-risk use case identification rate,Visibility of high-risk AI use cases,(# high-risk use cases identified ÷ # total AI use cases) × 100,Use a standardised risk rubric
+High-severity incident rate,Serious AI-related incidents,"(# Sev-1/Sev-2 incidents ÷ volume, e.g., per 10k requests)",Define severity rubric and SLOs
+HITL coverage,Use of human review where required,(# decisions routed to reviewer ÷ # decisions requiring review) × 100,Define routing rules clearly
+Inference cost per 1k requests,Unit cost of serving AI,"(Total inference cost ÷ # requests) × 1,000",Break down by model/tier; watch GPU utilisation
+Inference energy per 1k req,Energy per serving workload,"(Total inference kWh ÷ # requests) × 1,000",Track by model and hardware
+Jailbreak success rate,Bypass of safety guardrails,(# successful jailbreaks ÷ # jailbreak attempts) × 100,Track by attack class; lower is better
+Labelling accuracy (provenance),Correctness of AI-content labels,(# correctly labelled outputs ÷ # labelled outputs sampled) × 100,Audit across channels
+Latency P95,Tail latency for responses,95th percentile latency over period,Segment by endpoint and payload size
+Least privilege compliance,Access right-sizing for AI systems,(# principals passing access review ÷ # principals reviewed) × 100,Include data stores and model endpoints
+License compliance rate,Compliance with dataset/model/component licenses,(# assets with validated license compliance ÷ # assets assessed) × 100,Include terms for derivative use and redistribution
+Model card completeness,Depth/completeness of model documentation,(# required fields populated ÷ # required fields) × 100,"Include intended use, limits, evals, risks, contacts"
+Model degradation rate,Change in performance vs. baseline,(Current metric − baseline metric) ÷ time,Investigate when exceeding threshold
+Model exfil detection coverage,Coverage of exfiltration detection controls,(# exfil detection controls active ÷ # planned controls) × 100,"E.g., canary prompts, rate limits, egress filters"
+Model retirement hygiene,Decommissioning discipline,(# retired models with full offboarding artifacts ÷ # models retired) × 100,"Include data deletion, access revocation"
+Monitoring coverage,Coverage of planned monitors,(# monitors implemented ÷ # monitors planned) × 100,"Include data, performance, safety, cost"
+MTTD (incidents),Mean time to detect AI incidents,Average time from incident start to detection,Aim to reduce via monitoring
+MTTR (incidents),Mean time to resolve AI incidents,Average time from detection to containment/resolution,Include postmortem quality gates
+OOD detection rate,Detection of out-of-distribution inputs,(True positives ÷ actual OOD cases) × 100,Pair with false positive rate on in-distribution
+Output redaction effectiveness,Effectiveness of PII/sensitive redaction,(# sensitive items correctly redacted ÷ # sensitive items detected) × 100,Spot-check with human review
+Override rate,Frequency of human overrides,(# overridden AI decisions ÷ # AI decisions reviewed) × 100,High rate may indicate model issues
+PII leakage rate (outputs),Incidence of PII in model outputs,(# outputs flagged by PII detectors ÷ # outputs sampled) × 100,Validate detectors; use stratified sampling
+Poisoning detection coverage,Coverage of training data integrity checks,(# data sources scanned with poisoning checks ÷ # data sources) × 100,Include hash/signature checks
+Policy coverage ratio,Extent to which required AI governance policies exist,(# policies implemented ÷ # policies required by your framework) × 100,"Target ≥ 90–100%; define required set (e.g., risk, data, safety, security, incident response)"
+Policy exception rate,Frequency of approved exceptions to AI policies,(# approved exceptions open ÷ # total policies) × 100,Lower is better; track ageing of exceptions
+Postmortem quality score,Quality of incident postmortems,"(% with root cause, actions, owners, due dates ÷ # postmortems) × 100",Sample for depth; aim ≥ 90%
+Prompt injection success rate,Attacks causing policy violations or data exfil,(# successful injections ÷ # injection attempts) × 100,Include tool-calling exploits
+RACI clarity score,Clarity of roles for key AI processes,(# processes with documented R/A/C/I ÷ # key processes) × 100,Aim for 100% on high-risk processes
+Recourse availability,Availability of appeal or recourse paths,(# decisions with documented recourse ÷ # decisions requiring recourse) × 100,Include turnaround expectations
+Red-team coverage,Coverage of defined threat categories tested,(# categories tested ÷ # categories defined) × 100,"Map to a threat model (e.g., MITRE ATLAS)"
+Red-team fix rate,Remediation of red-team findings,(# findings remediated by due date ÷ # findings) × 100,Prioritise high-severity
+Regulatory mapping completeness,Mapping of regulatory requirements to controls,(# relevant requirements mapped ÷ # relevant requirements) × 100,Keep jurisdiction matrix current
+Reproducibility rate,Ability to reproduce training/inference results,(# successful reproductions ÷ # reproduction attempts) × 100,"Pin seeds, versions, data snapshots"
+Requirement-to-test traceability,Linkage from requirements to tests,(# requirements with mapped tests ÷ # requirements) × 100,Critical for regulated contexts
+Risk register coverage,Coverage of identified AI risks in the risk register,(# AI risks logged ÷ # AI risks identified in assessments) × 100,Tie to enterprise risk taxonomy
+Robustness under shift,Performance drop under distribution shift,((Baseline − Shifted performance) ÷ Baseline) × 100,"Test realistic shifts (domain, noise, length)"
+Runbook completeness,Quality of operational runbooks,(# required sections present ÷ # required sections) × 100,"Include rollback, kill switches, comms"
+Safety enforcement rate,Blocking of harmful outputs/requests,(# harmful attempts blocked ÷ # harmful attempts) × 100,Requires test harness or labelled traffic
+Safety eval coverage,Coverage of safety evaluation suites,(# evals run from suite ÷ # evals in suite) × 100,"Cover misuse, harms, bias, robustness"
+SBOM completeness (AI stack),Software/Model BOM completeness,(# components listed in SBOM ÷ # components discovered) × 100,"Include datasets, models, prompts"
+Secrets exposure incidents,"Secrets accidentally exposed (e.g., in prompts/logs)",Count per period,Root-cause recurring issues
+Selective risk (abstention),Error rate on non-abstained outputs,(Errors on accepted outputs ÷ # accepted outputs) × 100,Tune confidence thresholds
+Sensitive data exposure rate,Unintended presence of sensitive data in train/infer,(# records with sensitive attributes unintentionally present ÷ # records sampled) × 100,Use DLP scans; report by sensitivity class
+Shadow mode duration adherence,Adherence to planned shadow testing period,Median actual shadow days ÷ planned shadow days,Shortcuts raise risk; justify deviations
+Synthetic data usage ratio,Proportion of synthetic data used,(# synthetic training examples ÷ # total training examples) × 100,"Note purpose (augmentation, privacy) and quality checks"
+Task performance (baseline),Primary task metric at release,"Report metric (e.g., accuracy/F1/AUC/BLEU) on holdout",Define acceptance thresholds pre-release
+Test coverage (code),Automated test coverage of codebase,(Lines executed by tests ÷ total lines) × 100,"Track unit, integration, data validation"
+Third-party model assessment coverage,Due diligence on external models/APIs,(# third-party models assessed ÷ # third-party models used) × 100,"Include security, privacy, licensing"
+Throughput stability,Stability of throughput under load,Coefficient of variation of requests/sec,Lower is better; test with load profiles
+Timeout rate,Requests timing out,(# timed-out requests ÷ # total requests) × 100,Correlate with latency and autoscaling
+Toxicity rate,Rate of toxic or abusive content,(# outputs flagged by toxicity checks ÷ # outputs sampled) × 100,Calibrate for false positives
+Training emissions (kgCO2e),Carbon footprint of training,Energy (kWh) × grid emission factor,Use location-based or market-based factors
+Training energy (kWh),Energy used per training run,Sum of (power draw × hours) across hardware,Correlate with emissions and cost
+Unsafe content false negative rate,Harmful outputs not blocked,(# harmful outputs missed by filters ÷ # harmful attempts) × 100,Pair with false positive rate
+User feedback rate,Feedback captured per usage,"(# feedback items ÷ # user interactions) × 1,000",Encourage in-product feedback
+User satisfaction (CSAT/NPS),User sentiment about AI features,CSAT % satisfied or NPS per standard method,Segment by user type
+Vendor SLA compliance,Vendors meeting contractual SLAs,(# months in compliance ÷ # months measured) × 100,Track penalties and remediation
+Version traceability completeness,Lineage coverage across data→code→model,(# models with full lineage links ÷ # production models) × 100,"Include datasets, code commit, hyperparams, config"
+Vulnerability closure time (ML stack),Speed to remediate CVEs,Median days from CVE publish to fix for in-scope components,Track by severity
