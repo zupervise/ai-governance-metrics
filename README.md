@@ -40,15 +40,6 @@ Each file includes:
 git clone https://github.com/zupervise/ai-governance-metrics.git
 cd ai-governance-metrics
 
-
-🤝 Contributing
-We welcome contributions of:
-
-New domain-specific metrics
-Real-world use cases or implementation notes
-Tools or calculators
-Mappings to regulatory frameworks (e.g. EU AI Act, ISO 42001, NIST RMF)
-
 🌐 Related Standards & Frameworks
 
 EU AI Act
@@ -62,3 +53,10 @@ Documentation & Metrics: Creative Commons Attribution 4.0 (CC BY 4.0)
 Built by Zupervise with inspiration from real-world governance challenges across industries.
 We stand on the shoulders of standards-makers, auditors, and AI builders worldwide.
 
+🤝 Contributing
+We welcome contributions of:
+
+New domain-specific metrics
+Real-world use cases or implementation notes
+Tools or calculators
+Mappings to regulatory frameworks (e.g. EU AI Act, ISO 42001, NIST RMF)
