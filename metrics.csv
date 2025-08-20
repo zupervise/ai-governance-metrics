@@ -1,6 +1,5 @@
 Metric,Description,Approach,Comments
 Adversarial example success rate,Evasion under adversarial perturbations,(# attacks causing misbehaviour ÷ # adversarial attempts) × 100,Scope to relevant modalities
-Alert fatigue rate,Non-actionable alerts fraction,(# alerts closed as noise ÷ # total alerts) × 100,Tune alerting; aim to reduce
 API abuse rate,Suspicious/abusive calls to AI APIs,(# abusive/suspicious requests ÷ # total requests) × 100,Use anomaly detection and auth telemetry
 Audit evidence coverage,Availability of evidence for control tests,(# controls with sufficient evidence ÷ # controls tested) × 100,Aim ≥ 95%; sample evidence quality
 Availability (SLA),Uptime of AI service,((Total time − downtime) ÷ total time) × 100,Report monthly and quarterly
